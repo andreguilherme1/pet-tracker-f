@@ -1,0 +1,22 @@
+.pet-tracker {
+  &__title {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__map {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__warn {
+    width: 750px;
+    margin: auto;
+  }
+}

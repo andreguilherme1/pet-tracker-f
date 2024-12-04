@@ -1,0 +1,29 @@
+<div class="pet-tracker">
+  <div class="pet-tracker__title">
+    <h1>Pet Tracker</h1>
+  </div>
+  <div class="pet-tracker__map">
+    <google-map
+      height="400px"
+      width="750px"
+      [center]="center"
+      [zoom]="zoom"
+      (mapClick)="moveMap($event)"
+      (mapMousemove)="move($event)"
+    />
+  </div>
+
+  <div class="pet-tracker__warn">
+    <div class="alert alert-danger" role="alert" *ngIf="isAlert">
+      <b>ALERTA!!!</b> O pet saiu da área de segurança.
+    </div>
+    <div class="alert alert-success" role="alert" *ngIf="!isAlert">
+      O pet está dentro da área de segurança.
+    </div>
+  </div>
+
+  <div class="pet-tracker__buttons">
+    <a href="#" class="btn btn-primary mt-2 ml-4">Home</a>
+    <a href="#pet-tracker" class="btn btn-primary mt-2 ml-4">Histórico</a>
+  </div>
+</div>
